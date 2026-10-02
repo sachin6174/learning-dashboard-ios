@@ -8,6 +8,15 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             Form {
+                HStack {
+                    Spacer()
+                    Image(systemName: "graduationcap.fill")
+                        .font(.system(size: 38))
+                        .foregroundStyle(.blue)
+                        .accessibilityHidden(true)
+                    Spacer()
+                }
+                .listRowBackground(Color.clear)
                 TextField("Email", text: $email)
                     .textContentType(.emailAddress)
                     .keyboardType(.emailAddress)
