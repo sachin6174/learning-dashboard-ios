@@ -1,0 +1,30 @@
+name: LearningDashboard
+options:
+  bundleIdPrefix: in.sachin
+targets:
+  LearningDashboard:
+    type: application
+    platform: iOS
+    deploymentTarget: '17.0'
+    sources:
+      - path: LearningDashboard/App
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: in.sachin.LearningDashboard
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: 5.0
+        TARGETED_DEVICE_FAMILY: '1,2'
+        CODE_SIGNING_ALLOWED: NO
+  LearningDashboardTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: '17.0'
+    sources:
+      - path: LearningDashboardTests
+    dependencies:
+      - target: LearningDashboard
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: 5.0
+        CODE_SIGNING_ALLOWED: NO
