@@ -12,6 +12,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: in.sachin.LearningDashboard
         GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
         SWIFT_VERSION: 5.0
         TARGETED_DEVICE_FAMILY: '1,2'
         CODE_SIGNING_ALLOWED: NO
@@ -21,6 +22,19 @@ targets:
     deploymentTarget: '17.0'
     sources:
       - path: LearningDashboardTests
+    dependencies:
+      - target: LearningDashboard
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: 5.0
+        CODE_SIGNING_ALLOWED: NO
+  LearningDashboardUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: '17.0'
+    sources:
+      - path: LearningDashboardUITests
     dependencies:
       - target: LearningDashboard
     settings:

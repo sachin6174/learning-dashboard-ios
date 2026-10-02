@@ -13,6 +13,14 @@ final class AppModel: ObservableObject {
     private let repository = CourseRepository()
     private let logger = Logger(subsystem: "in.sachin.LearningDashboard", category: "app")
 
+    init() {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-resetDemoCache") {
+            UserDefaults.standard.removeObject(forKey: "cachedCourses")
+        }
+        #endif
+    }
+
     func login(email: String, password: String) async {
         loginError = nil
         guard email.contains("@"), email.split(separator: "@").last?.contains(".") == true else {

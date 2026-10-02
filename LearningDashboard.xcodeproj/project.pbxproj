@@ -13,11 +13,19 @@
 		47480E5974108CD348390533 /* CourseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B882E135D362ADED3F3448 /* CourseRepository.swift */; };
 		6A653935936B4B03D99A1A3E /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9751C13065319728FB9619A2 /* Views.swift */; };
 		95F606137E42DC295267D9F7 /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = 892275ABDDB29F5694D8A59C /* courses.json */; };
+		C597665B5B48DB312FF04CF5 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B8BE7929EAC5EDEC45BE2D /* DemoUITests.swift */; };
 		DCBC52F50BBA26364575269F /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF75C1550A993AFE936CD /* AppModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1E238229DE5CFCCA721C240E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 871176534D2370DB26A79472 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39D6EF53DE851396EB2FABF1;
+			remoteInfo = LearningDashboard;
+		};
+		DFBBFCEFA04E75856BD9758B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 871176534D2370DB26A79472 /* Project object */;
 			proxyType = 1;
@@ -32,10 +40,12 @@
 		12FA3A5D148E73402CB0D9F7 /* LearningDashboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningDashboardApp.swift; sourceTree = "<group>"; };
 		1B52F2D8677283763B55622D /* LearningDashboardTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = LearningDashboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B882E135D362ADED3F3448 /* CourseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRepository.swift; sourceTree = "<group>"; };
+		44B8BE7929EAC5EDEC45BE2D /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		5C3BF75C1550A993AFE936CD /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		892275ABDDB29F5694D8A59C /* courses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
 		9751C13065319728FB9619A2 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		D9F803CC4DDCDCFBE19B40E3 /* CourseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTests.swift; sourceTree = "<group>"; };
+		F5B763FF4F08D5CAF6514307 /* LearningDashboardUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = LearningDashboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -52,6 +62,7 @@
 			children = (
 				B10AE7D1E1F6DC1CC26AA610 /* App */,
 				64B8BF3C399CCE830B03156E /* LearningDashboardTests */,
+				C108A24B66F03E7391E1DC02 /* LearningDashboardUITests */,
 				EF6183330DFCDC5BF0786248 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,11 +81,20 @@
 			path = LearningDashboard/App;
 			sourceTree = "<group>";
 		};
+		C108A24B66F03E7391E1DC02 /* LearningDashboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				44B8BE7929EAC5EDEC45BE2D /* DemoUITests.swift */,
+			);
+			path = LearningDashboardUITests;
+			sourceTree = "<group>";
+		};
 		EF6183330DFCDC5BF0786248 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				02FF9A7D9EF8B9BA0B357216 /* LearningDashboard.app */,
 				1B52F2D8677283763B55622D /* LearningDashboardTests.xctest */,
+				F5B763FF4F08D5CAF6514307 /* LearningDashboardUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +102,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0464FA7D6E1729D06BE3EF39 /* LearningDashboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89A1E6FB8AAB4D4035F92752 /* Build configuration list for PBXNativeTarget "LearningDashboardUITests" */;
+			buildPhases = (
+				D455605A1CFE6FA44C681903 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1C21BF7296E277CADAAFEE7 /* PBXTargetDependency */,
+			);
+			name = LearningDashboardUITests;
+			packageProductDependencies = (
+			);
+			productName = LearningDashboardUITests;
+			productReference = F5B763FF4F08D5CAF6514307 /* LearningDashboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		39D6EF53DE851396EB2FABF1 /* LearningDashboard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CF9F36B5A6DFBEBDAF92315 /* Build configuration list for PBXNativeTarget "LearningDashboard" */;
@@ -127,6 +165,9 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					0464FA7D6E1729D06BE3EF39 = {
+						TestTargetID = 39D6EF53DE851396EB2FABF1;
+					};
 				};
 			};
 			buildConfigurationList = 3A7B058002268B794918CA34 /* Build configuration list for PBXProject "LearningDashboard" */;
@@ -145,6 +186,7 @@
 			targets = (
 				39D6EF53DE851396EB2FABF1 /* LearningDashboard */,
 				DE62EA25AD579248D92B9405 /* LearningDashboardTests */,
+				0464FA7D6E1729D06BE3EF39 /* LearningDashboardUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -181,6 +223,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D455605A1CFE6FA44C681903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C597665B5B48DB312FF04CF5 /* DemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -189,9 +239,34 @@
 			target = 39D6EF53DE851396EB2FABF1 /* LearningDashboard */;
 			targetProxy = 1E238229DE5CFCCA721C240E /* PBXContainerItemProxy */;
 		};
+		B1C21BF7296E277CADAAFEE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39D6EF53DE851396EB2FABF1 /* LearningDashboard */;
+			targetProxy = DFBBFCEFA04E75856BD9758B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		471ED212D0AC7B9203236E8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = in.sachin.LearningDashboardUITests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearningDashboard;
+			};
+			name = Release;
+		};
 		524A8A354AE406974312784B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -199,6 +274,7 @@
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -238,6 +314,7 @@
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,6 +464,26 @@
 			};
 			name = Debug;
 		};
+		FD4873C6ACA542D6D6E0E9A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = in.sachin.LearningDashboardUITests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearningDashboard;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -404,6 +501,15 @@
 			buildConfigurations = (
 				524A8A354AE406974312784B /* Debug */,
 				8D73E8C1B7B8DCB8B00EE047 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		89A1E6FB8AAB4D4035F92752 /* Build configuration list for PBXNativeTarget "LearningDashboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD4873C6ACA542D6D6E0E9A6 /* Debug */,
+				471ED212D0AC7B9203236E8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

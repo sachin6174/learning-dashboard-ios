@@ -2,6 +2,8 @@
 
 Small SwiftUI assignment app. Open `LearningDashboard.xcodeproj` in Xcode, select an iOS Simulator, and Run. Enter any valid email and any nonempty password; authentication is mocked.
 
+The [20-second demo](demo.mp4) shows login, courses, a lesson marked complete, and the saved 70% progress after relaunch. The [simulator screenshot](login.png) shows the login screen.
+
 ## Architecture
 
 `Views` show state and send actions to `AppModel` (a small `ObservableObject`). `AppModel` owns login, loading, and lesson completion. `CourseRepository` reads bundled JSON and persists courses. This keeps UI, state, and storage separate without adding layers that this small app does not need.
@@ -24,4 +26,4 @@ On Android I would use Jetpack Compose screens, a ViewModel with StateFlow, a re
 
 ## Verification
 
-Run the included `CourseTests` test target in Xcode. The test checks that completing a lesson changes progress once and repeated taps do not increase it again.
+Run the included tests in Xcode. The unit test checks that completing a lesson changes progress once; the UI test checks login, course navigation, lesson completion, and saved progress after relaunch.
