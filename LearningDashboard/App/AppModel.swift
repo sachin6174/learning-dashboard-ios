@@ -9,6 +9,7 @@ final class AppModel: ObservableObject {
     @Published var courses: [Course] = []
     @Published var isLoading = false
     @Published var courseError: String?
+    @Published var offlineMode = false
 
     private let repository = CourseRepository()
     private let logger = Logger(subsystem: "in.sachin.LearningDashboard", category: "app")
@@ -49,6 +50,14 @@ final class AppModel: ObservableObject {
             courseError = error.localizedDescription
             logger.error("Course load failed: \(error.localizedDescription)")
         }
+    }
+
+    func setOfflineMode(_ enabled: Bool) async {
+        offlineMode = enabled
+        if enabled {
+            logger.info("Offline cache mode enabled")
+        }
+        await loadCourses()
     }
 
     func completeLesson(courseID: Int, lessonID: Int) {

@@ -72,7 +72,12 @@ struct DashboardView: View {
             }
             .navigationTitle("My Courses")
             .toolbar {
-                Button("Retry") { Task { await model.loadCourses() } }
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    Button(model.offlineMode ? "Offline cache" : "Offline") {
+                        Task { await model.setOfflineMode(!model.offlineMode) }
+                    }
+                    Button("Retry") { Task { await model.loadCourses() } }
+                }
             }
             .task { if model.courses.isEmpty { await model.loadCourses() } }
         }

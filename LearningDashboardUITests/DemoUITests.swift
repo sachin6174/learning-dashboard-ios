@@ -23,6 +23,10 @@ final class DemoUITests: XCTestCase {
         app.buttons.containing(.staticText, identifier: "Introduction").firstMatch.tap()
         XCTAssertTrue(app.staticTexts["Progress: 70%"].waitForExistence(timeout: 5))
 
+        app.navigationBars.buttons["Offline"].tap()
+        XCTAssertTrue(app.navigationBars.buttons["Offline cache"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["70% complete · 20 lessons"].waitForExistence(timeout: 5))
+
         // Relaunch to show the progress comes from local storage.
         app.terminate()
         app.launchArguments = []
